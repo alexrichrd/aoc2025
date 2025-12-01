@@ -1,6 +1,6 @@
 # Advent of Code 2025
 
-This repository will (hopefully) contain a solution to the Advent of Code 2025 at some point.
+This repository will (hopefully) contain a solution to the [`Advent of Code 2025`](https://adventofcode.com/) at some point.
 
 ## Running a solution
 

@@ -3,6 +3,7 @@ import fileinput
 DIAL_UPPER_BOUND = 99
 
 
+############################ PART 1 ############################
 def perform_rotation_part1(
     current_pos: int,
     rot_str: str,
@@ -21,6 +22,21 @@ def perform_rotation_part1(
     return current_pos, zero_counter
 
 
+with fileinput.input(encoding="utf-8") as file:
+    # part 1
+    zero_counter = 0
+    current_pos = 50
+    for line in file:
+        current_pos, zero_counter = perform_rotation_part1(
+            current_pos,
+            line,
+            zero_counter,
+        )
+
+    print("Part 1:", zero_counter)
+
+
+############################ PART 2 ############################
 def perform_rotation_part2(
     current_pos: int,
     rot_str: str,
@@ -45,20 +61,6 @@ def perform_rotation_part2(
     else:
         print("Invalid rotation!")
     return current_pos, zero_counter + clicks_to_add
-
-
-with fileinput.input(encoding="utf-8") as file:
-    # part 1
-    zero_counter = 0
-    current_pos = 50
-    for line in file:
-        current_pos, zero_counter = perform_rotation_part1(
-            current_pos,
-            line,
-            zero_counter,
-        )
-
-    print("Part 1:", zero_counter)
 
 
 with fileinput.input(encoding="utf-8") as file:

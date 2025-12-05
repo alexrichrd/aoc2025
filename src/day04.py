@@ -25,7 +25,7 @@ def stencil(row: int, col: int, padded_input_diagram: NDArray[np.bool_]) -> bool
     return (
         np.sum(
             np.logical_and(
-                submask, [[True, True, True], [True, False, True], [True, True, True]]
+                submask, [[True, True, True], [True, False, True], [True, True, True]],
             ),
         )
         <= NEIGHBOR_LIMIT
